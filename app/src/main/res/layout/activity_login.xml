@@ -8,39 +8,50 @@
 
     <EditText
         android:id="@+id/Email"
-        android:layout_width="336dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:ems="10"
         android:hint="이메일"
         android:inputType="textPersonName"
-        android:text="이메일"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintStart_toStartOf="@+id/Password" />
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="61dp"
         android:ems="10"
         android:hint="비밀번호"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/LoginButton"
-        android:layout_width="341dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:text="로그인"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="106dp" />
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <TextView
         android:id="@+id/RegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="143dp"
         android:text="회원가입"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="165dp" />
+        app:layout_constraintEnd_toEndOf="@+id/Email"
+        app:layout_constraintStart_toStartOf="@+id/Password"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 </android.support.constraint.ConstraintLayout>
