@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText Password = (EditText) findViewById(R.id.et_pass);
         final Button LoginButton = (Button) findViewById(R.id.LoginButton);
         final TextView RegisterButton = (TextView) findViewById(R.id.btn_register1);
-
+//
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

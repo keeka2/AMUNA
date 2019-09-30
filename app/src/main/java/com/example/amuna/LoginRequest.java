@@ -9,7 +9,7 @@ import java.util.Map;
 public class LoginRequest extends StringRequest {
     final static private String URL = "http://matehunter.cafe24.com/Login.php";
     private Map<String, String> parameters;
-//
+///
     public LoginRequest(String Email, String Password, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
         parameters = new HashMap<>();
