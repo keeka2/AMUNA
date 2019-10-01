@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent registerIntent = new Intent(LoginActivity.this, Main2Activity.class);
                 LoginActivity.this.startActivity(registerIntent);
             }
         });
