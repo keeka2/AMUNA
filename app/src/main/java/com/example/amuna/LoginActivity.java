@@ -22,16 +22,20 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText Email = (EditText) findViewById(R.id.Email);
-        final EditText Password = (EditText) findViewById(R.id.Password);
+        final EditText Email = (EditText) findViewById(R.id.et_email);
+        final EditText Password = (EditText) findViewById(R.id.et_pass);
         final Button LoginButton = (Button) findViewById(R.id.LoginButton);
-        final TextView RegisterButton = (TextView) findViewById(R.id.RegisterButton);
-
+        final TextView RegisterButton = (TextView) findViewById(R.id.btn_register1);
+//
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(registerIntent);
+                /*메일인증
+                Intent authIntent = new Intent(LoginActivity.this, Auth.class);
+                LoginActivity.this.startActivity(authIntent);
+                */
+                Intent authIntent = new Intent(LoginActivity.this, Auth.class);
+                LoginActivity.this.startActivity(authIntent);
             }
         });
 //

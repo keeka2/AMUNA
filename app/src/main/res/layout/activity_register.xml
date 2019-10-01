@@ -6,56 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
-        android:ems="10"
-        android:hint="이메일"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="회원가입"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-//
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="0dp"
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="56dp"
+        android:text="이메일"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/et_email"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="비밀번호"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <EditText
-        android:id="@+id/Nickname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/et_pass"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="닉네임"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        android:hint="비밀번호를 설정해주세요."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="비밀번호 확인"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_pass"
+        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+
+    <EditText
+        android:id="@+id/et_repass"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="비밀번호를 다시 한 번 입력해주세요."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="성별"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_pass"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_repass"
+        app:layout_constraintTop_toBottomOf="@+id/et_repass" />
+
+    <RadioGroup
+        android:id="@+id/rg_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+
+        <RadioButton
+            android:id="@+id/rb_gender_m"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="남자" />
+
+        <RadioButton
+            android:id="@+id/rb_gender_w"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="여자" />
+
+    </RadioGroup>
 
     <Button
-        android:id="@+id/RegisterButton"
+        android:id="@+id/btn_register1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="회원가입"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nickname" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="8dp"
+        android:paddingVertical="15dp"
+        android:text="계정 생성하기"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/rg_gender"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/rg_gender"
+        app:layout_constraintTop_toBottomOf="@+id/rg_gender" />
+
+
 </android.support.constraint.ConstraintLayout>
