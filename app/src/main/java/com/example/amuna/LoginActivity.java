@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,15 +18,19 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private EditText et_email, et_pass;
+    private Button btn_login;
+    private TextView RegisterButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText Email = (EditText) findViewById(R.id.Email);
-        final EditText Password = (EditText) findViewById(R.id.Password);
-        final Button LoginButton = (Button) findViewById(R.id.LoginButton);
-        final TextView RegisterButton = (TextView) findViewById(R.id.RegisterButton);
+        et_email = (EditText) findViewById(R.id.et_email);
+        et_pass = (EditText) findViewById(R.id.et_pass);
+        btn_login = (Button) findViewById(R.id.LoginButton);
+        RegisterButton = (TextView) findViewById(R.id.btn_register1);
 
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,11 +40,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 //
-        LoginButton.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String userEmail = Email.getText().toString();
-                final String userPassword = Password.getText().toString();
+                String Email = et_email.getText().toString();
+
+                PasswordEncryption passwordEncryption = new PasswordEncryption();
+                String Password = passwordEncryption.encrypt(et_pass.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -49,15 +56,16 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if(success){
-
                                 String Email = jsonResponse.getString("Email");
                                 String Password = jsonResponse.getString("Password");
+
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.putExtra("Email", Email);
                                 intent.putExtra("Password",Password);
                                 LoginActivity.this.startActivity(intent);
                             }
                             else {
+
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("로그인에 실패하였습니다")
                                         .setNegativeButton("다시 시도",null)
@@ -71,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 };
-                LoginRequest loginRequest = new LoginRequest(userEmail,userPassword,responseListener);
+                LoginRequest loginRequest = new LoginRequest(Email,Password,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
             }
