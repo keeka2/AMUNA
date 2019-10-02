@@ -101,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity{
                                         .create()
                                         .show();
 
-                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, Auth.class);
                                 RegisterActivity.this.startActivity(intent);
                             }
                             else
