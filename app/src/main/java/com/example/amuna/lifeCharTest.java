@@ -1,9 +1,12 @@
 package com.example.amuna;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class lifeCharTest extends AppCompatActivity {
 
@@ -18,6 +21,7 @@ public class lifeCharTest extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
     }
     public void setupViewPager(ViewPager viewPager) {
         adapter.addFragment(new Fragment_First_Test(), "1번");

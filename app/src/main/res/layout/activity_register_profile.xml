@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="회원가입"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="닉네임"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <EditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="350dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="닉네임을 입력해주세요."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/textView9"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="내국인 / 외국인"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_nickname"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_nickname"
+                    app:layout_constraintTop_toBottomOf="@+id/et_nickname" />
+
+                <RadioGroup
+                    android:id="@+id/rg_korf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="26dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+
+                    <RadioButton
+                        android:id="@+id/rb_korean"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="내국인" />
+
+                    <RadioButton
+                        android:id="@+id/rb_foreigner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="외국인" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="14dp"
+                    android:text="생년월일"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/rg_korf"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/rg_korf"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_korf" />
+
+                <EditText
+                    android:id="@+id/et_birth"
+                    android:layout_width="350dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="생년월일을 선택해주세요."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/textView11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="전화번호"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_birth"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_birth"
+                    app:layout_constraintTop_toBottomOf="@+id/et_birth" />
+
+                <EditText
+                    android:id="@+id/et_phoneNum"
+                    android:layout_width="350dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="핸드폰 번호를 입력해주세요."
+                    android:inputType="phone"
+                    app:layout_constraintEnd_toEndOf="@+id/textView12"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="직업"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/et_phoneNum"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/et_phoneNum"
+                    app:layout_constraintTop_toBottomOf="@+id/et_phoneNum" />
+
+                <Spinner
+                    android:id="@+id/sp_job"
+                    android:layout_width="150dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView13"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="대학교"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/sp_job"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/sp_job"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_job" />
+
+                <EditText
+                    android:id="@+id/et_univ"
+                    android:layout_width="350dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="학교를 선택해주세요."
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="14dp"
+                    android:text="기타"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView13"
+                    app:layout_constraintTop_toBottomOf="@+id/et_phoneNum" />
+
+                <EditText
+                    android:id="@+id/et_jobEtc"
+                    android:layout_width="190dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="기타 입력해주세요."
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/sp_job"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <Button
+                    android:id="@+id/btn_registerPf1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:paddingVertical="15dp"
+                    android:text="다음"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/et_univ"
+                    app:layout_constraintTop_toBottomOf="@+id/et_univ" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
