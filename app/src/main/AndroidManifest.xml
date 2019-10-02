@@ -13,10 +13,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".RegisterProfileActivity"></activity>
         <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -25,13 +25,12 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="google.com" />
+                    android:host="google.com"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
