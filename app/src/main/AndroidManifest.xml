@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegisterProfileActivity"></activity>
+        <activity android:name=".SearchUniversityActivity" android:theme="@style/Theme.MyDialog" />
+        <activity android:name=".BirthPickerDialog" />
+        <activity android:name=".RegisterProfileActivity" />
         <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

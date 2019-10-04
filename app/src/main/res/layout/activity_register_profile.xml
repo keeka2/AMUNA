@@ -159,6 +159,8 @@
 
                 <Spinner
                     android:id="@+id/sp_job"
+                    android:entries="@array/직업"
+                    android:spinnerMode="dropdown"
                     android:layout_width="150dp"
                     android:layout_height="51dp"
                     android:layout_marginTop="8dp"
@@ -168,11 +170,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/tv_univ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
                     android:text="대학교"
+                    android:visibility="invisible"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="@+id/sp_job"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -186,34 +189,37 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:hint="학교를 선택해주세요."
+                    android:visibility="invisible"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_univ"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView14"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                    app:layout_constraintStart_toStartOf="@+id/tv_univ"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_univ" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/tv_etc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="130dp"
                     android:layout_marginTop="14dp"
                     android:text="기타"
+                    android:visibility="invisible"
                     android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/textView13"
                     app:layout_constraintTop_toBottomOf="@+id/et_phoneNum" />
 
                 <EditText
-                    android:id="@+id/et_jobEtc"
+                    android:id="@+id/et_etc"
                     android:layout_width="190dp"
                     android:layout_height="51dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:hint="기타 입력해주세요."
+                    android:visibility="invisible"
                     android:inputType="textPersonName"
                     app:layout_constraintStart_toEndOf="@+id/sp_job"
-                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_etc" />
 
                 <Button
                     android:id="@+id/btn_registerPf1"

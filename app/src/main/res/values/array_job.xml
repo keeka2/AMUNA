@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="직업">
+        <item>선택</item>
+        <item>직장인</item>
+        <item>대학생</item>
+        <item>기타</item>
+    </string-array>
+</resources>
