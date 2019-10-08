@@ -65,7 +65,6 @@ public class BirthPickerDialog extends DialogFragment {
                     if(day.length() == 1){
                         day = "0" + day;
                     }
-//                    fullbirth = year + "" + month + "" + day;
                     fullbirth = year + month + day;
                     mDialogResult.finish(fullbirth);
                 }

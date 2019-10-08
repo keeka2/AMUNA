@@ -98,6 +98,10 @@ public class RegisterProfileActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(adapterView.getItemAtPosition(i).toString().equals("직장인")){
+                    tv_univ.setVisibility(View.INVISIBLE);
+                    et_univ.setVisibility(View.INVISIBLE);
+                    tv_etc.setVisibility(View.INVISIBLE);
+                    et_etc.setVisibility(View.INVISIBLE);
                     job = 0;
                 }else if(adapterView.getItemAtPosition(i).toString().equals("대학생")){
                     tv_univ.setVisibility(View.VISIBLE);
@@ -112,6 +116,10 @@ public class RegisterProfileActivity extends AppCompatActivity {
                     et_univ.setVisibility(View.INVISIBLE);
                     job = 2;
                 }else{
+                    tv_univ.setVisibility(View.INVISIBLE);
+                    et_univ.setVisibility(View.INVISIBLE);
+                    tv_etc.setVisibility(View.INVISIBLE);
+                    et_etc.setVisibility(View.INVISIBLE);
                     job = 3;
                 }
             }

@@ -27,13 +27,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/univListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="110dp"
         android:divider="#999999"
         android:dividerHeight="1dp"
         app:layout_constraintTop_toBottomOf="@+id/et_search_univ"
-        tools:layout_editor_absoluteX="-20dp"></ListView>
+        tools:layout_editor_absoluteX="-20dp">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView_main_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="4"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/univListView"
+        tools:layout_editor_absoluteX="12dp"/>
 
 </android.support.constraint.ConstraintLayout>
