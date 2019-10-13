@@ -1,10 +1,9 @@
 package com.example.amuna;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         RegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent = new Intent(LoginActivity.this, Auth.class);
+                Intent registerIntent = new Intent(LoginActivity.this, RegisterProfileActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
             }
         });
@@ -44,9 +43,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Email = et_email.getText().toString();
+                String Password = et_pass.getText().toString();
 
                 PasswordEncryption passwordEncryption = new PasswordEncryption();
-                String Password = passwordEncryption.encrypt(et_pass.getText().toString());
+                //String Password = passwordEncryption.encrypt(et_pass.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -59,9 +59,8 @@ public class LoginActivity extends AppCompatActivity {
                                 String Email = jsonResponse.getString("Email");
                                 String Password = jsonResponse.getString("Password");
 
-                                Intent intent = new Intent(LoginActivity.this, Main2Activity.class);
+                                Intent intent = new Intent(LoginActivity.this, LoginSplash.class);
                                 intent.putExtra("Email", Email);
-                                intent.putExtra("Password",Password);
                                 LoginActivity.this.startActivity(intent);
                             }
                             else {

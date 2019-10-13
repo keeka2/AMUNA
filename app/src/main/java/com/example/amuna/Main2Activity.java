@@ -1,25 +1,31 @@
 package com.example.amuna;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
-
-
 import android.view.MenuItem;
 
+import java.util.List;
+
+import static com.example.amuna.LoginSplash.Email;
+import static com.example.amuna.LoginSplash.userList;
 
 
 public class Main2Activity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    private HomeFragment fragmentSearch = new HomeFragment();
-    private ChatFragment fragmentCamera = new ChatFragment();
-    private FavFragment fragmentCall = new FavFragment();
+    private HomeFragment fragmentHome = new HomeFragment();
+    private ChatFragment fragmentChat = new ChatFragment();
+    private FavFragment fragmentFav = new FavFragment();
     private AccFragment fragmentAcc = new AccFragment();
+
+
+    private ListAdapter adapter;
 
 
     @Override
@@ -28,10 +34,15 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frameLayout, fragmentSearch).commitAllowingStateLoss();
+        transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new ItemSelectedListener());
+
+
+
+
+
     }
 
     class ItemSelectedListener implements BottomNavigationView.OnNavigationItemSelectedListener{
@@ -46,13 +57,13 @@ public class Main2Activity extends AppCompatActivity {
                     break;
 
                 case R.id.navigation_home:
-                    transaction.replace(R.id.frameLayout, fragmentSearch).commitAllowingStateLoss();
+                    transaction.replace(R.id.frameLayout, fragmentHome).commitAllowingStateLoss();
                     break;
                 case R.id.navigation_chat:
-                    transaction.replace(R.id.frameLayout, fragmentCamera).commitAllowingStateLoss();
+                    transaction.replace(R.id.frameLayout, fragmentChat).commitAllowingStateLoss();
                     break;
                 case R.id.navigation_favorites:
-                    transaction.replace(R.id.frameLayout, fragmentCall).commitAllowingStateLoss();
+                    transaction.replace(R.id.frameLayout, fragmentFav).commitAllowingStateLoss();
                     break;
             }
             return true;

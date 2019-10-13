@@ -1,14 +1,12 @@
 package com.example.amuna;
 
-import android.content.Intent;
-import android.os.StrictMode;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.app.Dialog;
 import android.content.DialogInterface;
-
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.CountDownTimer;
-
+import android.os.StrictMode;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
